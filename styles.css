@@ -1,0 +1,29 @@
+body {
+    background: black;
+    font-family: sans-serif;
+    color: white;
+    font-size: 3em;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+span {
+    padding: 0.5em;
+}
+
+span:hover:after {
+    content: "";
+    display: block;
+    border: 0.5em solid transparent;
+    border-bottom-color: red;
+    border-bottom-width: 50vh;
+    border-block-start: none;
+    margin-top: -0.75em;
+    position: absolute;
+    z-index: -1;
+}
