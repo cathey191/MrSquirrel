@@ -1,11 +1,15 @@
 body {
     background: black;
     font-family: sans-serif;
-    color: white;
+    color: black;
+    text-shadow:
+            1px 1px 2px white,
+            0 0 1em rgba(33, 225, 237),
+            0 0 1em white;
     font-size: 3em;
 }
 
-div {
+.parent {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,17 +17,48 @@ div {
 }
 
 span {
-    padding: 0.5em;
+    padding: 0.25em;
 }
 
-span:hover:after {
-    content: "";
-    display: block;
-    border: 0.5em solid transparent;
-    border-bottom-color: red;
-    border-bottom-width: 50vh;
-    border-block-start: none;
-    margin-top: -0.75em;
+.lightning {
     position: absolute;
     z-index: -1;
+    margin: -1em 0.1em;
+}
+
+span:hover + .lightning {
+    border-right:  .1em solid transparent;
+    border-bottom: .8em  solid rgba(33, 225, 237);
+    border-left:   .1em solid transparent;
+
+    /* Controlls the size of the stars. */
+    font-size: 3em;
+}
+
+span:hover + .lightning:before {
+    content: '';
+
+    position: absolute;
+    top: .7em;
+    left: -0.8em;
+
+    border-right:  0.8em solid transparent;
+    border-bottom: .2em  solid rgba(33, 225, 237);
+    border-left:   0.8em solid transparent;
+
+    transform: rotate(-35deg);
+}
+
+span:hover + .lightning:after {
+    content: '';
+
+    position: absolute;
+    top: .7em;
+    left: -0.8em;
+
+    border-right:  0.8em solid transparent;
+    border-bottom: .2em  solid rgba(33 ,225 ,237);
+    border-left:   0.8em solid transparent;
+
+    transform: rotate(35deg);
 }
