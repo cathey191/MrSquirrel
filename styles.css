@@ -3,7 +3,8 @@
 }
 
 body {
-    background: black;
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
     color: black;
     text-shadow:
@@ -11,7 +12,26 @@ body {
             0 0 .5em #33D4AF,
             0 0 1em white;
     font-size: 3em;
-    background: radial-gradient(rgba(33, 225, 237) -40%, black 50%);
+    background-image: linear-gradient(#00AD70 45%, #2786D5);
+}
+
+body::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-image:
+        radial-gradient(circle at center, white 2px, transparent 0),
+        radial-gradient(circle at center, white 1px, transparent 0),
+        radial-gradient(circle at center, white 2px, transparent 0),
+        radial-gradient(circle at center, white 2px, transparent 0),
+        radial-gradient(circle at center, white 1px, transparent 0);
+    background-size: 5rem 5rem;
+    background-position: 0 0, 1rem 2rem, 8rem 1.5rem, 2rem 2.5rem, 4rem 3rem;
+    top: 0;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
 }
 
 .parent {
@@ -20,23 +40,18 @@ body {
     align-items: center;
     height: 100vh;
 
-    /*background-image: radial-gradient(*/
-    /*        circle at center,*/
-    /*        black 0.1rem,*/
-    /*        transparent 0.2rem*/
-    /*);*/
-    /*background-size: 1.3rem 1.3rem;*/
-    /*background-position: 0 0, 0.65rem 0.65rem;*/
+    background: radial-gradient(transparent, black 30%);
 }
 
 span {
     padding: 0.25em;
     z-index: 2;
+    position: relative;
 }
 
 .lightning {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     margin: -1em 0.1em;
 }
 
