@@ -56,23 +56,24 @@ span {
 }
 
 span:hover + .lightning::after {
-    border-color: transparent transparent rgba(33, 225, 237);
-    border-width: 0 45em 2em 45em;
-    transform: scale(0.1) rotate(1rad) translate(-39em, -3em);
-    transform-origin: 0 0;
-    border-style: solid;
     content: "";
     display: inline-block;
     position: absolute;
+    width: 1em;
+    height: 150px;
+    transform: skew(80deg);
+    rotate: 90deg;
+    background-image: radial-gradient(rgba(33, 225, 237, 1), rgba(33, 225, 237, 0));
+    margin: -1.25em 0;
 }
 
 span:hover + .lightning::before {
-    border-color: transparent transparent rgba(33, 225, 237);
-    border-width: 0 45em 2em 45em;
-    transform: scale(0.1) rotate(260rad) translate(-47em, -8em);
-    transform-origin: 0 0;
-    border-style: solid;
     content: "";
     display: inline-block;
     position: absolute;
+    width: 1em;
+    height: 150px;
+    transform: skew(80deg);
+    background-image: radial-gradient(rgba(33, 225, 237, 1), rgba(33, 225, 237, 0));
+    margin: -1.25em 0;
 }
