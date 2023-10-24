@@ -84,3 +84,61 @@ span:hover + .lightning::before {
 
     rotate: 25deg;
 }
+
+/* ---- LIGHTNING ---- */
+
+div div:nth-child(4) span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 1em;
+    height: 0.75em;
+    transform: skew(80deg);
+    background-image: radial-gradient(rgba(33, 225, 237, 0.8), rgba(33, 225, 237, 0));
+    margin: 0 -1em;
+    z-index: -1;
+
+    rotate: 300deg;
+}
+
+div div:nth-child(7) span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 1em;
+    height: 0.75em;
+    transform: skew(80deg);
+    background-image: radial-gradient(rgba(33, 225, 237, 0.5), rgba(33, 225, 237, 0));
+    margin: 0 -0.8em;
+    z-index: -1;
+
+    rotate: 50deg;
+}
+
+div div:nth-child(odd) span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 1em;
+    height: 0.75em;
+    transform: skew(80deg);
+    background-image: radial-gradient(rgba(33, 225, 237, 0.4), rgba(33, 225, 237, 0));
+    margin: 0 -0.8em;
+    z-index: -1;
+
+    rotate: 220deg;
+}
+
+div div:nth-child(even) span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 1em;
+    height: 0.75em;
+    transform: skew(80deg);
+    background-image: radial-gradient(rgba(33, 225, 237, 0.5), rgba(33, 225, 237, 0));
+    margin: 0 -0.8em;
+    z-index: -1;
+
+    rotate: 90deg;
+}
